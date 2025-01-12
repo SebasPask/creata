@@ -1,0 +1,38 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASS=password
+      - DB_NAME=nextjsdb
+    develop:
+      watch:
+        # Sync changes in the `src` folder to `/app/src` in the container
+        - action: sync
+          path: ./src
+          target: /app/src
+          ignore:
+            - node_modules/
+            - .next/
+        # Rebuild the container when `package.json` or `Dockerfile` changes
+        - action: rebuild
+          path: package.json
+        - action: rebuild
+          path: Dockerfile
+
+  db:
+    image: mysql:8
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: nextjsdb

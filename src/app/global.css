@@ -1,0 +1,30 @@
+html,
+body {
+  background: #cfd2c5;
+  height: 100%;
+}
+
+.main-form {
+  background: #ffffff;
+}
+
+.input-donation-group .btn {
+  border-radius: 20px !important;
+}
+
+.btn-yellow,
+.btn-yellow:hover {
+  color: black;
+  background: #FAB90A !important;
+    border-color: #FAB90A !important;
+}
+
+.input-donation {
+  max-width: 60px;
+  text-align: center;
+  background: transparent !important;
+  border: none;
+}
+a {
+  color: black;
+}
