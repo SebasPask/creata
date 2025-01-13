@@ -4,7 +4,8 @@ body {
   height: 100%;
 }
 
-.main-form {
+.main-form,
+.donations-list {
   background: #ffffff;
 }
 
@@ -27,4 +28,7 @@ body {
 }
 a {
   color: black;
+}
+.donations-list .table-responsive {
+  overflow-x: auto;
 }

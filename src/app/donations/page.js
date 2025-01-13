@@ -1,5 +1,5 @@
 'use client';
-import styles from "../global.css";
+import "../global.css";
 import { useState, useEffect } from 'react';
 
 export default function DonationsPage() {
@@ -25,10 +25,10 @@ export default function DonationsPage() {
     return (
         <div className="container  h-100">
             <div className="row align-items-center h-100">
-                <div className="col-sm-11 col-xl-11 mx-auto main-form">
+                <div className="col-sm-12 col-md-12 col-lg-12 col-xl-10 mx-auto donations-list">
                     <h1 className="text-center p-5">Donation List</h1>
                     <p className="text-center px-5">Sapien et ligula ullamcorper malesuada proin libero nunc consequat. Sed lectus vestibulum mattis ullamcorper.</p>
-                    <div>
+                    <div className="table-responsive">
                         {error && <p style={{ color: 'red' }}>{error}</p>}
                         {donations.length > 0 ? (
                             <table className="table table-hover">

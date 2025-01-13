@@ -1,5 +1,5 @@
 "use client";
-import styles from "./global.css";
+import "./global.css";
 import { useEffect, useState, useRef } from "react";
 import InputDonations from "@/components/inputDonations";
 import Popup from "@/components/popup";
@@ -179,7 +179,7 @@ export default function Home() {
   return (
     <div className="container  h-100">
       <div className="row align-items-center h-100">
-        <div className="col-sm-11 col-xl-5 mx-auto main-form">
+        <div className="col-sm-11 col-md-8 col-lg-7 col-xl-6 mx-auto main-form">
           <h1 className="text-center pt-5 pb-3">Make a Donation</h1>
           <p className="text-center px-5">Sapien et ligula ullamcorper malesuada proin libero nunc consequat. Sed lectus vestibulum mattis ullamcorper.</p>
           <Popup show={openPopup} handleClose={handlePopupClose} />
